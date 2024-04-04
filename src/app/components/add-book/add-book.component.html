@@ -1,0 +1,48 @@
+
+<div class="row justify-content-center mt-5">
+    <div class="mb-5">
+      
+<h2>List your book.</h2>
+<br>
+        <form class="max-w-sm mx-auto" [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+          <div class="mb-2">
+            <label>Title</label>
+            <input class="form-control" type="text" formControlName="title" required>
+          </div>
+  
+          <!-- <mat-form-field>
+            <mat-label>Enter Book Title</mat-label>
+            <input matInput placeholder="Ex. Harry Potter" formControlName="title">
+          </mat-form-field> -->
+   
+          <div class="mb-2">
+            <label>Price</label>
+            <input class="form-control" type="text" formControlName="price" required>
+          </div>
+   
+          <div class="mb-2">
+            <label>Description</label>
+            <input class="form-control" type="text" formControlName="description" required>
+          </div>
+          <div class="mb-2">
+         
+
+          <mat-button-toggle-group name="Book Type" aria-label="Book Type" formControlName="book_type">
+            <mat-button-toggle value="Local Author">Local Author</mat-button-toggle>
+            <mat-button-toggle value="Foreign Author">Foreign Author</mat-button-toggle>
+          </mat-button-toggle-group>
+          </div>
+
+          
+          
+          <div class="mb-2">
+            <button matTooltip="Add?" mat-raised-button color="warn" type="submit">Add Book</button>
+          
+          </div>
+          
+          
+        </form>
+    </div>
+  
+  </div>
+
